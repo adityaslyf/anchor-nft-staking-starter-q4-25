@@ -69,7 +69,7 @@ describe("anchor-nft-staking-q4-25", () => {
     console.log(`Collection Info PDA: ${collectionInfoPda.toString()}`);
 
     stakeAccountPda = PublicKey.findProgramAddressSync(
-      [Buffer.from("stake"), configPda.toBuffer(), asset.publicKey.toBuffer()],
+      [Buffer.from("stake_account"), asset.publicKey.toBuffer()],
       program.programId
     )[0];
     console.log(`Stake Account PDA: ${stakeAccountPda.toString()}`);
